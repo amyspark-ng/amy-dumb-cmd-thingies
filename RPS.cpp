@@ -16,7 +16,7 @@ sleep(1);
 system("cls");
 
 // Main menu
-	std::cout << "----  W e l c o m e  t o  ----\n";
+	std::cout << "---- Welcome to ----\n";
 	std::cout << "\n";
 	std::cout << mainMenu << "\n";
 	std::cout << "\n";
