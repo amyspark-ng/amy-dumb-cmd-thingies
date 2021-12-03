@@ -1,3 +1,4 @@
-# Idk
+# pan con queso me gusta el pan con queso
 
-I did this repositor as a test, here's my ugly Rock Paper Scissors game written in C++
+Hi, you're checking my first repository on GitHub, a dummy `Rock Paper Scissors` game written in C++, took me some months because i kept doing some other things but yeah it's finished, feel free to try it ig.
+  > _(yeah the reason because there is no releases it's because idk how to generate an executable file without the dumb ``libstdc++-6.dll`` problem so if by chance you know how to fix this please help me_
