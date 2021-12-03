@@ -6,7 +6,7 @@
 // # Setup stuff / Variables and strings #
 
 // Strings
-std::string loading = ";--- L O A D I N G ---;\n";
+std::string loading = ";--- LOADING ---;\n";
 std::string mainMenu = R"(  _____                        _____            _       _____      _                        
 |  __ \                      |  __ \          | |     / ____|    (_)                       
 | |__) __ _ _ __   ___ _ __  | |__) |___   ___| | __ | (___   ___ _ ___ ___  ___  _ __ ___ 
@@ -28,7 +28,6 @@ std::string scissors = "3) SCISORS ;";
 // Variables
 char u_answer;
 int u_choice;
-int c_choice;
 
 // # Definition of mainMenu_text(), endProgram() and gameFunction() declared and defined 
 void endProgram() {
@@ -36,11 +35,12 @@ void endProgram() {
 	std::cout << "\n";
 	system("pause");
 }
+
 void gameFunction() {
 
 // srand and rand functions
 srand(time(NULL));
-int c_choice = rand() % 3 + 1; // Rand function
+int c_choice = rand() % 3 + 1; // rand function
 
 // User's choice switch
 switch(u_choice) {
@@ -63,7 +63,7 @@ switch(u_choice) {
 	break;
 	
 	default:
-	std::cout << "Your election was unknown";
+	std::cout << "- ; Your election was unknown.";
 	break;
 } // End of u_choice switch
 
@@ -92,7 +92,7 @@ switch(c_choice) {
 
 sleep(2);
 std::cout << "\n";
-std::cout << "--Which means that..." << "\n";
+std::cout << "-- And the winner is... --" << "\n";
 std::cout << "\n";
 std::cout << "...\n";
 
