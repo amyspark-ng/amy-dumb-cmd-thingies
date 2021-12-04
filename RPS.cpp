@@ -1,10 +1,9 @@
 #include <iostream> // Main library
 #include <unistd.h> // sleep() function
-#include <ctype.h> // islower() and isupper() functions
+#include <ctype.h> // toupper() function
 #include <cstdlib> // rand() and srand() functions
 #include <ctime> // time variable inside srand() (?
-
-#include "gameFunction.hpp"
+#include "gameFunction.hpp" // includes the other file
 
 // main() function declared and defined
 int main() {
@@ -16,7 +15,7 @@ sleep(1);
 system("cls");
 
 // Main menu
-	std::cout << "---- Welcome to ----\n";
+	std::cout << "----  W e l c o m e  t o  ----\n";
 	std::cout << "\n";
 	std::cout << mainMenu << "\n";
 	std::cout << "\n";
