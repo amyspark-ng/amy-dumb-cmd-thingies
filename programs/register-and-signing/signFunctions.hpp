@@ -10,7 +10,7 @@
 // ---------------- DEFINITION OF SIGN FUNCTIONS ---------------- //
 
 // SIGN IN FUNCTION DEFINITION
-signIn() {
+void signIn() {
 	std::cout << "\n";
 	signIn_text();
 	loadingData();
