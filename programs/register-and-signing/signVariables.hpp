@@ -1,4 +1,4 @@
-//signFunction.hpp
+// # signVariables.hpp #
 #include <iostream> // main library
 #include <ctype.h> // toupper() function
 #include <string.h> // empty() function
@@ -11,20 +11,19 @@
 // fstream storedData class
 std::fstream storedData;
 
+// - act stands for actual — entered input when signing up for first time
+std::string actName; 
+std::string actPassword;
+
 // - cur stands for current — entered input when signing in
-std::string curName;	// Name accepted when signing in
-std::string curPassword;	// Password accepted when signing in
-// - act stands for actual lol — entered input when signing up for first time
-std::string actName; // Name registered when signing up
-std::string actPassword;	// Password registered when signing up
+std::string curName;	
+std::string curPassword;	
+
 // - extr stands for extracted — extracted input from userData.txt
 std::string extrName;
 std::string extrPassword;
 
-// Im so dumb i had to make another string for the mayusVer of the name
-std::string mayusName; 
-// stores both variables in a vector so i can save this vector on userData.txt
-std::vector<std::string> actValues = {actName, actPassword}; 
+// just a char with answers
 char answer;
 
 // ---------------- DEFINITION OF TEXT FUNCTIONS ---------------- //
@@ -72,41 +71,41 @@ void signIn_text() {
 // savingData() function
 void savingData() {
 
-// generates and opens file writing in it
-storedData.open("userData.txt", std::ios::out);  
-if (storedData.is_open()) {
-// Stored the actual name and password on the file	
-	storedData << actName << "\n";
-	storedData << actPassword << "\n";
-} // end of is_open thingy
-storedData.close(); // closes the file
-
+	// generates and opens file writing in it
+	storedData.open("userData.txt", std::ios::out);  
+	if (storedData.is_open()) {
+		// Stored the actual name and password on the file	
+		storedData << actName << "\n";
+		storedData << actPassword << "\n";
+	} // end of is_open thingy
+	
+	storedData.close(); // closes the file
 } // End of savingData() 
 
 // loadingDdata() function
 void loadingData() {
 
-storedData.open("userData.txt", std::ios::in);
-if (storedData.is_open()) {
-	getline(storedData, extrName);
-	getline(storedData, extrPassword);
+	storedData.open("userData.txt", std::ios::in);
+	if (storedData.is_open()) {
+		getline(storedData, extrName);
+		getline(storedData, extrPassword);	
 
-	// gives the 'act' variables the value of the 'extr' from the .txt file
-	actName = extrName;
-	actPassword = extrPassword; 
-} // End of if
-
-storedData.close();
+		// gives the 'act' variables the value of the 'extr' from the .txt file
+		actName = extrName;
+		actPassword = extrPassword; 
+	} // End of if
+	
+	storedData.close();
 } // End of loadingData()
 
 // deletes the already written data in userData.txt
 void deletingData() {
 
-storedData.open("userData.txt", std::ios::out);
+	storedData.open("userData.txt", std::ios::out);	
 
-// turns both lines of information to null
-storedData << " ";
-storedData << " ";
+	// turns both lines of information to null
+	storedData << "";
+	storedData << "";	
 
-storedData.close();
+	storedData.close();
 } // End of deletingData()
