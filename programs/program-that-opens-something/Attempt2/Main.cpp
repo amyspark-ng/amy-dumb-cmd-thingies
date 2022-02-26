@@ -1,3 +1,4 @@
+// Program that creates some HTML file with a text you put and then opens it
 #include <iostream>
 #include <fstream>
 
